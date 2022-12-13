@@ -4,3 +4,6 @@
 1. Cada ejercicio se implementará en una carpeta independiente (**un paquete de Java**)
 2. Si un ejercicio tiene subapartados se creará un *subpaquete*.
 3. Cada paquete contendrá su propia clase principal con un *main*.
+
+## Contenido
+* Ejercicio POO2
