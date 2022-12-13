@@ -1,0 +1,74 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package generargrupos;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author alumno
+ */
+public class Genera_grupos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Alumno[] arrayAlumnos = getAlumnosFromCSV("alumnos.csv");
+        int tamanhoGrupo = 3;
+        
+        int numGrupos = arrayAlumnos.length / tamanhoGrupo;
+      
+        numGrupos += arrayAlumnos.length % tamanhoGrupo !=0?1:0;
+        
+        Grupo[]  grupos = new Grupo[numGrupos];
+        
+        
+        for(int i= 0; i<grupos.length;i++){
+            Grupo aux = new Grupo("G"+i,tamanhoGrupo);
+            grupos[i] = aux;            
+        }        
+        //Utilizo g para avanzar por el array de grupos.
+        int g = 0;
+        for(int i=0; i<arrayAlumnos.length; i++){
+            if(!grupos[g].addAlumno(arrayAlumnos[i])){
+                g++;
+                
+            }
+            
+            
+        }
+        
+        
+        
+    }
+
+    
+    public static Alumno[] getAlumnosFromCSV(String rutaFichero) {
+        ArrayList<Alumno> auxAls = new ArrayList<Alumno>();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(rutaFichero));
+            String linea;
+            while((linea=br.readLine())!=null){
+                String[] valores = linea.split(";");
+                auxAls.add(new Alumno(valores[0],valores[1],valores[2]));
+            } 
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Genera_grupos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Genera_grupos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Alumno[] als = new Alumno[auxAls.size()];
+        als = auxAls.toArray(als);
+        return als;
+    }
+
+}
