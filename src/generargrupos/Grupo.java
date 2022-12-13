@@ -69,7 +69,15 @@ public class Grupo {
 
     @Override
     public String toString() {
-        return super.toString(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        String salida = nombre+"---\n";
+        for(int i=0; i<alumnos.length;i++){
+            if(alumnos[i]==null){
+                continue;
+            }
+            salida+= alumnos[i]+"\t\n";
+        }
+        
+        return salida;
     }
     
     

@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +24,7 @@ public class Genera_grupos {
      */
     public static void main(String[] args) {
         Alumno[] arrayAlumnos = getAlumnosFromCSV("alumnos.csv");
+        arrayAlumnos = desordenarAlumnos(arrayAlumnos);
         int tamanhoGrupo = 3;
         
         int numGrupos = arrayAlumnos.length / tamanhoGrupo;
@@ -41,18 +43,34 @@ public class Genera_grupos {
         for(int i=0; i<arrayAlumnos.length; i++){
             if(!grupos[g].addAlumno(arrayAlumnos[i])){
                 g++;
-                
-            }
-            
+                grupos[g].addAlumno(arrayAlumnos[i]);
+            }            
             
         }
         
+        for(int i= 0; i < grupos.length; i++){
+            System.out.println(grupos[i]);
+        }        
         
+    }
+    
+    public static Alumno[] desordenarAlumnos(Alumno[] ordenados){
+        Alumno[] desordenados = new Alumno[ordenados.length];
+        int x = 0;
+        Random r = new Random();
+        for (int i = 0; i < ordenados.length; i++) {
+            do{                
+                x = r.nextInt(desordenados.length);
+            }while(desordenados[x]!=null);
+            desordenados[x] = ordenados[i];
+        }
         
+        return desordenados;
     }
 
     
     public static Alumno[] getAlumnosFromCSV(String rutaFichero) {
+        //TODO Pilla la primera linea del csv
         ArrayList<Alumno> auxAls = new ArrayList<Alumno>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(rutaFichero));

@@ -20,3 +20,5 @@
 nbproject
 /build.xml
 /manifest.mf
+/build/
+alumnos.csv
