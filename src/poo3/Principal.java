@@ -1,17 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package poo3.ejercicios1y2;
+package poo3;
 
 import java.util.Scanner;
+import poo3.ejercicios1y2.Persona;
 
 /**
  *
- * @author alumno
+ * @author Samuel
  */
 public class Principal {
     public static void main(String[] args) {
+        ejercicio2();
+    }
+    
+    public static void ejercicio1(){
+        //TODO
+    }
+    
+    public static void ejercicio2(){
         Scanner sc = new Scanner(System.in);
         String nombre, ap1, ap2;
         int nif, edad;
@@ -30,5 +35,4 @@ public class Principal {
         System.out.println(p1);
         System.out.println("DNI completo: "+p1.getDNI());
     }
-    
 }

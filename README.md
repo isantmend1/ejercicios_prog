@@ -6,4 +6,7 @@
 3. Cada paquete contendrá su propia clase principal con un *main*.
 
 ## Contenido
+* generagrupos
 * Ejercicio POO2
+* Ejercicios POO3
+
