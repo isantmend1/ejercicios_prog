@@ -130,23 +130,6 @@ public class Coche {
     public void setConsumo(double consumo) {
         this.consumo = consumo;
     }
-    
-    public static boolean esCorrectaMatricula(String matricula){
-        boolean correcta = true;
-        if(matricula.length()!=7){
-            correcta = false;
-        }
-        
-        try{
-            Integer.parseInt(matricula.substring(0, 5));
-        }catch(NumberFormatException e){
-            correcta = false;
-        }
-        
-        //TODO letras
-        
-        return correcta;
-    }
 
     
     public String toString() {
