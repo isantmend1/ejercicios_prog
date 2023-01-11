@@ -1,4 +1,4 @@
-package poo3.ejercicios1y2;
+package ud3.poo3.ejercicios1y2;
 
 /**
  *

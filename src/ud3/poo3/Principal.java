@@ -1,8 +1,8 @@
-package poo3;
+package ud3.poo3;
 
 import java.util.Scanner;
-import poo3.ejercicio3.Coche;
-import poo3.ejercicios1y2.Persona;
+import ud3.poo3.ejercicio3.Coche;
+import ud3.poo3.ejercicios1y2.Persona;
 
 /**
  *

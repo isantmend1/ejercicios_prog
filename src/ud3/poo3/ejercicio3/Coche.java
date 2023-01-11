@@ -1,5 +1,5 @@
 
-package poo3.ejercicio3;
+package ud3.poo3.ejercicio3;
 
 /**
  *

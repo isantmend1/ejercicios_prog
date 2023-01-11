@@ -1,4 +1,4 @@
-package poo2;
+package ud3.poo2;
 
 import java.util.Scanner;
 
