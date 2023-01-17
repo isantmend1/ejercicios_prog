@@ -1,5 +1,7 @@
 package ud4.ejerciciosED1;
 
+import ud4.ejerciciosED1.ejercicio8.Alumno;
+
 /**
  *
  * @author Samuel Loureiro Cardoso
@@ -25,6 +27,79 @@ public class MisArrays {
             }
         }
         return salida;
+    }
+    
+    
+    /**
+     * Ejercicio 4. Sobrecarga los métodos de los ejercicios anteriores para que funcionen con
+     * tipos de dato int.
+     * @param array Array de números donde buscar el dato.
+     * @param dato Número a ser buscado.
+     * @return True, si el dato se encuentra en el array. False en caso en caso
+     *          contrario.
+     */
+    public static boolean estaEnArray(int[] array, int dato) {
+        boolean salida = false;
+        for(int actual:array){
+            if(actual== dato){
+                salida = true;
+            }
+        }
+        return salida;
+    }
+    
+    /**
+     * Ejercicio 5: Define un método estático en la clase MisArrays que reciba como parámetro
+     * un array de enteros y devuelva un array de enteros correspondiente al primero pero sin
+     * números repetidos. Nota: el array que se recibe como parámetro no puede ser alterado
+     * @param array
+     * @return un array con los elementos de <b>array</b> pero sin repetidos.
+     */
+    public static int[] eliminarRepetidos(int[] array){
+        int[] auxSinRepes = new int[array.length];
+        int introducidos = 0;
+        for(int i=0; i<array.length; i++){
+            boolean esta = false;
+            //Comprobar si está en array[i]auxSinRepes hasta introducidos.
+            for(int j=0; j< introducidos; j++){
+                if(array[i]==auxSinRepes[j]){
+                    esta = true;
+                    break;
+                }
+            }
+            if(!esta){
+                auxSinRepes[introducidos] = array[i];
+                introducidos++;
+            }
+            //Si no está se introduce
+        }
+        
+        int[] sinRepes = new int[introducidos];
+        for(int i=0; i<introducidos;i++){
+            sinRepes[i] = auxSinRepes[i];
+        }
+        
+        return sinRepes;
+    }
+    
+    /**
+     * Ejercicio 8. Crea una clase Alumno que tenga como parámetros nombre, edad y altura. A
+     * continuación define un método estático en la clase MisArrays que reciba como parámetro
+     * un array de Alumnos y los ordene de menor a mayor edad.
+     * @param alumnos Array de alumnos a ordenar. 
+     */
+    public static void ordenarAlumnos(Alumno[] alumnos){
+        for(int i = 0; i<alumnos.length;i++){
+            for(int j=0; j<alumnos.length-1-i;j++){
+                if(alumnos[j].getEdad()>alumnos[j+1].getEdad()){
+                    Alumno aux = alumnos[j];
+                    alumnos[j] = alumnos[j+1];
+                    alumnos[j+1] = aux;
+                }
+            }
+        }
+        
+        
     }
 
 }
