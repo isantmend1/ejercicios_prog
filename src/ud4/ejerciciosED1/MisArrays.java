@@ -1,5 +1,7 @@
 package ud4.ejerciciosED1;
 
+import java.util.Arrays;
+import java.util.Random;
 import ud4.ejerciciosED1.ejercicio8.Alumno;
 
 /**
@@ -97,9 +99,31 @@ public class MisArrays {
                     alumnos[j+1] = aux;
                 }
             }
+        }           
+    }
+    
+    /**
+     * Ejercicio 11. Haciendo uso de la clase Arrays del API de Java define la función int[]
+     * rellenaPares(int longitu, int fin), que crea y devuelve una tabla ordenada de la longitud
+     * especificada, que se encuentra rellena con números pares aleatorios del rango 2 – fin.
+     * @return 
+     */
+    public static int[] rellenaPares(int longitud, int fin){
+        //Crear un array de longitud elementos
+        int[] pares = new int[longitud];
+        //Cargalo con números pares aleatorios
+        Random rand = new Random();
+        
+        for(int i=0; i<pares.length;i++){
+            int numero = rand.nextInt(2, fin+1);
+            if(numero%2!=0)
+                numero--;
+            
+            pares[i] = numero;
         }
-        
-        
+        //Ordenarlo
+        Arrays.sort(pares);
+        return pares;
     }
 
 }

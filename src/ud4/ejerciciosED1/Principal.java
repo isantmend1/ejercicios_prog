@@ -23,6 +23,9 @@ public class Principal {
 //          
 //          System.out.println(Arrays.toString(arr2));
 //          System.out.println(arr2.length);
+
+            int[] arr = MisArrays.rellenaPares(20, 50);
+            System.out.println(Arrays.toString(arr));
     }
     
 }
