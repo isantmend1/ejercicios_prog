@@ -13,15 +13,19 @@ public class Principal {
 //        String[] prueba = {"hola","HI","ola","boas"};
 //        boolean esta = MisArrays.estaEnArray(prueba, "Hip");
 //        System.out.println("esta="+esta);
-          int[] arr = new int[99999];
-          Random r = new Random();
-          
-          for(int i=0;i<arr.length;i++){
-            arr[i]=r.nextInt(9999);
-          }
-          int[] sArr = MisArrays.eliminarRepetidos(arr);
-          System.out.println(sArr.length);
-          System.out.println(Arrays.toString(sArr));
+
+//          int[] arr = new int[1000000];
+//          Random rand = new Random();
+//          for(int i=0; i<arr.length; i++){
+//              arr[i] = rand.nextInt(100000);
+//          }
+//          int[] arr2 = MisArrays.eliminarRepetidos(arr);
+//          
+//          System.out.println(Arrays.toString(arr2));
+//          System.out.println(arr2.length);
+
+            int[] arr = MisArrays.rellenaPares(20, 50);
+            System.out.println(Arrays.toString(arr));
     }
     
 }
