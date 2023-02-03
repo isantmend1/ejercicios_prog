@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package generargrupos;
 
 import java.io.BufferedReader;
@@ -88,5 +84,6 @@ public class Genera_grupos {
         als = auxAls.toArray(als);
         return als;
     }
+    
 
 }
