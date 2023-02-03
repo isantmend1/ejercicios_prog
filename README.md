@@ -6,11 +6,15 @@
 3. Cada paquete contendrá su propia clase principal con un *main*.
 
 ## Contenido
-### UD3
+### [UD3](src/ud3)
+ > Programación Orientada a Objetos
+* Generagrupos 
+    > Programa que permite generar grupos aleatorios con los miembros de clase.
 * POO2
 * POO3
   * ejercicio3
   * ejercicios1y2
 ### UD4
+> Tipos avanzados de datos
 * ejerciciosED1
 
