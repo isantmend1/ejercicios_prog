@@ -14,9 +14,9 @@
 * [POO3](src/ud3/poo3)
   * [ejercicio 3](src/ud3/poo3/ejercicio3) 
   * [ejercicios 1 y 2](src/ud3/poo3/ejercicios1y2)
-* [Refuerzo](src/ud3/refuerzo)
-  * [Sesión 1](src/ud3/refuerzo/sesion1)
-  * [Sesión 2](src/ud3/refuerzo/sesion2)
+  * [Refuerzo](src/ud3/refuerzo)
+    * [Sesión 1](src/ud3/refuerzo/sesion1)
+    * [Sesión 2](src/ud3/refuerzo/sesion2)
 ### [UD4](src/ud4)
 > **Tipos avanzados de datos**
   * [ejercicios ED1](src/ud4/ejerciciosED1)
