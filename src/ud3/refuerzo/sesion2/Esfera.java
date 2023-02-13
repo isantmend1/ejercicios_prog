@@ -77,6 +77,10 @@ public class Esfera {
     public void setRadio(double radio){
         this.radio = radio;
     }
+    
+    public void getRadio(double radio){
+        return this.radio;
+    }
 
     @Override
     public String toString() {
