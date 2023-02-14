@@ -78,7 +78,7 @@ public class Esfera {
         this.radio = radio;
     }
     
-    public void getRadio(double radio){
+    public double getRadio(){
         return this.radio;
     }
 
