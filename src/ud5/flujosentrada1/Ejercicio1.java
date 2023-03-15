@@ -15,6 +15,7 @@ public class Ejercicio1 {
     public static String FICHERO_PATH = "ficheros/alumni.db";
 
     public static void main(String[] args) {
+        //CREAR
         FileInputStream fis = null;
 
         try {
