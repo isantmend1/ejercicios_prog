@@ -42,8 +42,18 @@ public class XmlBienFormado {
         //Leemos linea a linea
         String linea;
         try {
-            //TODO: Root element
+            //Utilizamos esta variable para garantizar que solo hay un nodo
+            //raiz y que además se abre el la linea 1.
+            boolean rootNotDetected=true;
             while((linea=br.readLine())!=null){
+                if(pila.isEmpty()){//La pila solo puede estar vacia la primera vez que leemos
+                    if(rootNotDetected){
+                        rootNotDetected = false;
+                    }else{//Si entra por aquí significa que hay más de un nodo raiz.
+                        throw new XmlMalFormadoException();
+                    }
+                }
+                    
                 //Extraemos etiquetas de la linea.
                 List<Etiqueta> etiquetas = extraerEtiquetas(linea);
                 //Comprobamos anidamiento
