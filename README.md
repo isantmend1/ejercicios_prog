@@ -25,4 +25,6 @@
   * [ejercicios ED5](src/ud4/ejerciciosED5)
 ### [UD5](src/ud5)
 > **Entrada y salida de datos**
-  * [Flujos de entrada (ejercicios 1)](src/ud5/flujosentrada1)
+  * Flujos de entrada
+    * [ejercicio 1](src/ud5/flujosentrada1)
+    * [ejercicio 6](src/ud5/flujosentrada6)
