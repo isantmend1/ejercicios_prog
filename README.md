@@ -28,3 +28,5 @@
   * Flujos de entrada
     * [ejercicio 1](src/ud5/flujosentrada1)
     * [ejercicio 6](src/ud5/flujosentrada6)
+  * Flujos de entrada/salida
+    * [ejercicio 2](src/ud5/flujosalida2)
